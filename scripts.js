@@ -94,3 +94,18 @@ function fadeIn(el, display) {
 
 
 TweenLite.set($("#body"), {css:{backgroundImage:'url(https://picsum.photos/600/600?random=1)'}});
+
+let angle = 0;function carrousel(sign){
+
+    spinner=document.querySelector(".carrousel");
+
+    if(!sign) {
+        angle = angle + 60}
+    else
+        {
+
+            angle = angle - 60
+
+        }
+
+        spinner.setAttribute("style","transform:rotateY("+ angle +"deg);")}

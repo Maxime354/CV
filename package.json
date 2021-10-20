@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Maxime354/CV#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "gsap": "^3.8.0",
+    "icons": "^1.0.0",
     "jquery": "^3.6.0"
   }
 }
