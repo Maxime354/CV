@@ -1,8 +1,4 @@
-/*!
-* Start Bootstrap - Stylish Portfolio v6.0.3 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
-*/
+
 window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
@@ -93,7 +89,6 @@ function fadeIn(el, display) {
 }
 
 
-TweenLite.set($("#body"), {css:{backgroundImage:'url(https://picsum.photos/600/600?random=1)'}});
 
 let angle = 0;function carrousel(sign){
 
@@ -102,10 +97,14 @@ let angle = 0;function carrousel(sign){
     if(!sign) {
         angle = angle + 60}
     else
-        {
+    {
 
-            angle = angle - 60
+        angle = angle - 60
 
-        }
+    }
 
-        spinner.setAttribute("style","transform:rotateY("+ angle +"deg);")}
+    spinner.setAttribute("style","transform:rotateY("+ angle +"deg);")}
+
+    function move() {
+        gsap.to("#max", {x: 200, duration: 5});
+    }
