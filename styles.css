@@ -7341,6 +7341,8 @@ textarea.form-control-lg {
 
 .mb-1 {
     margin-bottom: 0.25rem !important;
+    color: #FFFFFF;
+    margin-right: 300px;
 }
 
 .mb-2 {
@@ -7357,6 +7359,7 @@ textarea.form-control-lg {
 
 .mb-5 {
     margin-bottom: 3rem !important;
+    color: #FFFFFF;
 }
 
 .mb-auto {
@@ -11276,6 +11279,7 @@ html {
 .content-section {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
+    background-color: #6c757d;
 }
 
 .content-section-heading h2, .content-section-heading .h2 {
@@ -11402,7 +11406,7 @@ html {
 
 .callout {
     padding: 3rem 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("https://i.picsum.photos/id/128/3823/2549.jpg?hmac=VbPyA2vESva2YdoXqll9REBcbQIskgv_c-D60C1s0xc") no-repeat center center;
+    background: linear-gradient(90deg, rgba(187, 186, 186, 0.3) 0%, rgba(0, 0, 0, 0.45) 100%), url("https://i.picsum.photos/id/128/3823/2549.jpg?hmac=VbPyA2vESva2YdoXqll9REBcbQIskgv_c-D60C1s0xc") no-repeat center center;
     background-size: cover;
     color: rgb(255, 255, 255);
 
@@ -11459,10 +11463,11 @@ footer.footer .social-link:hover {
     height: auto;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.39);
+
 }
 .masthead h1, .masthead .h1 {
     font-size: 5em;
@@ -12160,9 +12165,60 @@ button::-moz-focus-inner {
 }
 
 #max{
-    width: 150px;
+    width: 200px;
     border-radius: 50%;
     border-color: black;
     border-style: solid;
-    margin-right: 500px;
+    margin-bottom: 45px;
+}
+
+
+
+.title {
+    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+#portfolio {
+    animation: scroll 70s linear infinite;
+    background: url("https://i.picsum.photos/id/307/5760/3840.jpg?hmac=XtsDQJ477ylS15H1VvpO9qCUlvrvBcDVQBu9ZUlB-SI"), rgba(17, 17, 17, 0.61);
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+}
+
+@keyframes scroll {
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    #portfolio #about {
+        animation: scroll 200s linear infinite;
+    }
+}
+
+@media (min-width: 670px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+#download{
+    margin-bottom: 150px;
+}
+
+#intro{
+    margin-top: 250px;
 }

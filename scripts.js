@@ -1,4 +1,5 @@
 
+
 window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
@@ -75,20 +76,6 @@ function fadeIn(el, display) {
     })();
 }
 
- function play() {
-    this.video = document.getElementById("video");
-    this.c1 = document.getElementById("my-canvas");
-    this.ctx1 = this.c1.getContext("2d");
-    let self = this;
-
-    this.video.addEventListener("play", function() {
-        self.width = self.video.width;
-        self.height = self.video.height;
-        self.timerCallback();
-    }, false);
-}
-
-
 
 let angle = 0;function carrousel(sign){
 
@@ -106,5 +93,37 @@ let angle = 0;function carrousel(sign){
     spinner.setAttribute("style","transform:rotateY("+ angle +"deg);")}
 
     function move() {
-        gsap.to("#max", {x: 200, duration: 5});
+        gsap.to("#max", {x: 900, duration: 3});
     }
+
+    function explode() {
+        gsap.effects.explode(".masthead", {
+            direction: "up", //can reference any properties that the author decides - in this case "direction".
+            duration: 3
+        });
+    }
+
+gsap.registerPlugin(SplitText);
+
+let tl = gsap.timeline(),
+    mySplitText = new SplitText("#quote", { type: "words,chars" }),
+    chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+gsap.set("#quote", { perspective: 400 });
+
+console.log(chars);
+
+tl.from(chars, {
+    duration: 0.8,
+    opacity: 0,
+    scale: 0,
+    y: 80,
+    rotationX: 180,
+    transformOrigin: "0% 50% -50",
+    ease: "back",
+    stagger: 0.01
+});
+document.getElementById("animate").onclick = function () {
+    tl.restart();
+};
+
